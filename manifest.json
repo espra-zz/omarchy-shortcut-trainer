@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "community.shortcut-trainer",
+  "name": "Shortcut Trainer",
+  "version": "0.4.0",
+  "author": "Community prototype",
+  "license": "MIT",
+  "description": "Learn Omarchy shortcuts while you work: tips that fit the app in front, spaced repetition, and new shortcuts from Omarchy updates picked up automatically.",
+  "kinds": ["service", "bar-widget"],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Shortcut Trainer",
+    "description": "Shortcuts for the app you are in. Click to mark them learned, middle-click for a tip, right-click to pause.",
+    "category": "Info",
+    "defaultSection": "right",
+    "allowMultiple": false
+  }
+}

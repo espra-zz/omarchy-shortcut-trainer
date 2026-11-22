@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Run every test. Nothing here touches the live compositor or your config.
+
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+for f in manifest.json i18n/*.json tests/*.json; do
+  python3 -m json.tool "$f" >/dev/null || { echo "invalid JSON: $f" >&2; exit 1; }
+done
+
+node --test tests/
